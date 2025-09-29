@@ -1,1 +1,19 @@
-<p>persona-list works!</p>
+<app-navbar></app-navbar>
+
+<div class="container">
+  <h2>Elenco Persone</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="indirizzo"
+    placeholder="Cerca per indirizzo"
+  />
+  <button (click)="filterByIndirizzo()">Cerca</button>
+
+  <ul>
+    <li *ngFor="let persona of persone">
+      {{ persona.nome }} {{ persona.cognome }} - {{ persona.codiceFiscale }}
+      <a [routerLink]="['/persone', persona.id]">Dettagli</a>
+    </li>
+  </ul>
+</div>

@@ -1,1 +1,9 @@
-<p>persona-detail works!</p>
+<div class="container" *ngIf="persona">
+  <h2>Dettaglio Persona</h2>
+  <p><strong>Nome:</strong> {{ persona.nome }}</p>
+  <p><strong>Cognome:</strong> {{ persona.cognome }}</p>
+  <p><strong>Codice Fiscale:</strong> {{ persona.codiceFiscale }}</p>
+  <p><strong>Data di Nascita:</strong> {{ persona.dataDiNascita }}</p>
+
+  <a routerLink="/persone">← Torna all'elenco</a>
+</div>
